@@ -1,9 +1,9 @@
 # README
 Exercices d'algorithmique du jour 1 réalisés par : 
-Adrien Bannwarth
-Paartheepan Raveenthiran
-Etienne Mela
-TP 9 sur Discord
+- Adrien Bannwarth
+- Paartheepan Raveenthiran
+- Etienne Mela
+> TP 9 sur Discord
 
 ## Tri à bulle
 
@@ -17,7 +17,7 @@ Ce tri consiste à insérer le premier élément à trier à l'index 1 d'une nou
 
 ## Tri Peigne
 
-Ce tri est basé sur le même principe que le tri à bulle à l'exception qu'il compare des éléments plus "lointain" et ne compare pas uniquement les éléments adjacents. Au fur et à mesure des comparaisons, l'ago raccourci progressivement l'intervalle entre les éléments du tableau.
+Ce tri est basé sur le même principe que le tri à bulle à l'exception qu'il compare des éléments plus "lointain" et ne compare pas uniquement les éléments adjacents. Au fur et à mesure des comparaisons, l'algo raccourci progressivement l'intervalle entre les éléments du tableau.
 
 
 ## Tri par selection
@@ -46,10 +46,17 @@ Dans un premier temps on découpe le tableau en 2 de manière récursive afin de
 
 ## Benchmark des algos
 
-Tris stable: tri par insertion - tri bulle - tri fusion
-Tris instable: tri par séléction - tri peigne - tri Shell - tri rapide
+Tris stable: 
+- Tri par insertion 
+- Tri bulle 
+- Tri fusion
+Tris instable: 
+- Tri par séléction 
+- Tri peigne 
+- Tri Shell 
+- Tri rapide
 
- Tableau utilisé : "12;22;46;90;8;36;82;27;72;2;38;71;11;75;63"
+ > Tableau utilisé : "12;22;46;90;8;36;82;27;72;2;38;71;11;75;63"
 
 
 |Type de tri     |Temps d'Execution (µs)         |Comparaisons                 |Iterations                   |Remarques                    |
