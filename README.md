@@ -50,6 +50,7 @@ Tris stable:
 - Tri par insertion 
 - Tri bulle 
 - Tri fusion
+
 Tris instable: 
 - Tri par séléction 
 - Tri peigne 
