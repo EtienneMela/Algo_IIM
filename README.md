@@ -1,5 +1,5 @@
 # PROJET ALGORITHMIQUE
-Exercices réalisés dans le cadre du module "Algorithmique/Modèles de données" du master IWM de la 4ème année à IIM.
+Exercices réalisés dans le cadre du module "Algorithmique/Modèles de données" du master IWM de la 4ème année à l'IIM.
 
 [![ForTheBadge built-with-science](http://ForTheBadge.com/images/badges/built-with-science.svg)](https://github.com/EtienneMela/Algo_IIM)
 
