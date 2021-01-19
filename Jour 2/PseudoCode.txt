@@ -1,0 +1,59 @@
+STRUCTURE BLOCK
+    INT identifier
+    STRING previousHash
+    STRING body
+    STRING timestamp
+    INT nonce
+    STRING hash
+
+    METHOD GENERATEHASH
+        VAR STRING letters
+        VAR STRING result_STRING
+        VAR STRING hash
+        Debut:
+            TANT QUE hash ne commence pas par ''
+            # On ajoute les valeurs au bloc
+            bloc <- result_str + dentifier + previousHash + timestamp + body + nonce
+            # On encode le bloc
+            encoded <- bloc.encodeDebut
+            hash <- sha256(encoded)
+            RETURN hash
+        Fin
+
+    METHOD GETTIMESTAMP
+        Debut:
+            RETURN date et heure actuelles au format YYYY MM D / H MIN SEC
+        Fin
+
+STRUCTURE BLOCKCHAIN
+    BLOCK[] chain
+
+    METHOD ADD
+        PARAM STRING body 
+        VAR STRING|NONE previousHash
+        VAR BLOCK body 
+        Debut:
+            previousHash <- None SI LONGUEUR(STRUCTURE.chain) = 0 SINON STRUCTURE.chain[LONGUEUR(STRUCTURE.chain) - 1].hash
+            # On créer le block
+            block <- Block(LONGUEUR(STRUCTURE.chain), previousHash, body)
+            # On ajoute le block à la liste `chain`
+            STRUCTURE.chain.ADD(block)
+        Fin
+    
+    METHOD GETFORMATTEDBLOCK
+        PARAM INT index
+        VAR BLOCK block
+        VAR STRING readable
+        Debut:
+            block <- STRUCTURE.chain[index]
+            readable = "[\n" + ",\n " + "previousHash: " + block.previousHash + "body: " + block.body + "timestamp: " + str(block.timestamp))+ "nonce: " + block.nonce + "hash: " + block.hash + "\n]"
+            RETURN readable
+        Fin
+
+    METHOD GETBLOCK
+        PARAM INT index
+        Debut:
+            RETURN STRUCTURE.chain[index]
+        Fin
+        
+
