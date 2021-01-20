@@ -15,3 +15,8 @@ export FLASK_APP=server.py
 export FLASK_ENV=development
 python -m flask run
 ```
+
+## Mettre le port en public 
+```bash
+npx ngrok http 5000
+```
