@@ -1,0 +1,2 @@
+{"identifier": 0, "previousHash": null, "body": "test 1", "nonce": 40849, "timestamp": "2021-01-20, 17:23:05.305277", "hash": "cafe021f59775e4d08a35329f6eb3a3a27d07b3df066bd67105dc07330528f80"}
+{"identifier": 1, "previousHash": "cafe021f59775e4d08a35329f6eb3a3a27d07b3df066bd67105dc07330528f80", "body": "test 2", "nonce": 87974, "timestamp": "2021-01-20, 17:23:05.535187", "hash": "cafe8b3fc6468bdf6bcb7e76d395c4f56ab86429be6de6a1699102f16fac8067"}

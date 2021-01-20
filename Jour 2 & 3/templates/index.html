@@ -1,0 +1,91 @@
+{% include 'components/head.html' %}
+<div class="container mx-auto">
+    <div id="created" class="text-white px-6 py-4 border-0 rounded relative mt-4 mb-4 bg-green-500 hidden">
+      <span class="text-xl inline-block mr-5 align-middle">
+        <i class="fas fa-bell" />
+      </span>
+      <span class="inline-block align-middle mr-8">
+        Votre block a bien été ajouté à la blockchain
+      </span>
+    </div>
+  <p class="mb-2 mt-5 text-xl	font-semibold">Routes de l'api: </p>
+  <div class="ml-2 flex flex-col">
+    <api-docline
+    route="/block/{blockIndex}"
+    method="GET"
+    description="Permet de récupérer un bloc par son index"
+    ></api-docline>
+    <api-docline
+    method="POST"
+    route="/block"
+    description="Ajoute un block à la blockchain"
+    ></api-docline>
+    <api-docline
+    method="GET"
+    route="/block"
+    description="Récupère la liste des blocks de la blockchain"
+    ></api-docline>
+    
+    
+    <p class="mb-2 mt-5 text-xl	font-semibold">Listes des blocs: </p>
+      {% for block in blocks %}
+        <a
+          href="block/{{block.identifier}}" 
+          class="d-block mt-1 text-sm text-gray-500 no-underline"
+        >
+          <div class="bg-white w-full p-2 rounded-xl shadow-sm border">
+            <div class="font-semibold text-gray-700">
+              indentifier: {{block.identifier}}<br/>
+            </div>
+            <div class="text-sm text-gray-500">
+              body: {{block.body}}
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+  </div>
+</div>
+
+  <script>
+    const params = new URL(window.location).searchParams
+    const status = params.get('statusText')
+
+    if(status === 'CREATED') {
+      document.querySelector('#created').classList.remove('hidden')
+      history.pushState('', '', '/');
+    }
+
+    class ApiDocLine extends HTMLElement {
+      constructor() {
+        super()
+        this.innerHTML = /* html */`  
+        <div class="mb-2 p-6 space-y-4 rounded bg-white w-full p-2 rounded-xl shadow-md border">
+          <span class="font-semibold">
+            <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-green-600 bg-green-200 uppercase last:mr-0 mr-1">
+              ${this.method}
+            </span>
+            ${this.route}
+          </span><br/>
+          <p class="font-medium">${this.description}</p>
+        </div>
+        `
+      }
+
+      get description() {
+        return this.getAttribute('description')
+      }
+
+      get route() {
+        return this.getAttribute('route')
+      }
+      get method() {
+        return this.getAttribute('method')
+      }
+  
+    }
+
+    window.customElements.define('api-docline', ApiDocLine)
+  </script>
+
+</body>
+</html>

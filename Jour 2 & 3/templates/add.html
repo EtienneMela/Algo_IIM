@@ -1,0 +1,42 @@
+{% include 'components/head.html' %}
+  <!-- IMPORT BANNER -->
+  <!-- {% include 'components/banner.html' %} -->
+
+
+  <form id="form-element" class="mt-5 editor mx-auto w-10/12 flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl">
+    <textarea
+      class="description bg-gray-100 sec p-3 h-60 border border-gray-300 outline-none"
+      spellcheck="false"
+      placeholder="Your block content here"
+      name="block_body" id="body" 
+    ></textarea>
+
+    <div class="buttons flex">
+      <input
+        class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-auto bg-indigo-500"
+        type="submit"
+      />
+    </div>
+  </div>
+</body>
+
+<script>
+  const $ = (...params) => document.querySelector(...params)
+  const form = $('#form-element')
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    const data = new FormData(form)
+    console.log(data)
+    fetch('/block', {
+      method: 'POST',
+      body: data
+    })
+    .then(function(res) {
+      console.log(res)
+      if(res.status === 201) {
+        window.location = `/?statusText=${res.statusText}`
+      }
+    });
+  })
+</script>
+</html>

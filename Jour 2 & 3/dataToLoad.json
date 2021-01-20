@@ -1,0 +1,3 @@
+{"identifier": 0, "previousHash": null, "body": "coucou", "nonce": 15950, "timestamp": "2021-01-20, 11:04:12.638354", "hash": "cafe27843f760a2ccd09bdf62908d21b965ca5570e4c7b7030cc0e1e5c58bd6e"}
+{"identifier": 1, "previousHash": "cafe27843f760a2ccd09bdf62908d21b965ca5570e4c7b7030cc0e1e5c58bd6e", "body": "bonsoir", "nonce": 47932, "timestamp": "2021-01-20, 11:04:12.761542", "hash": "cafe59751afbc6a2290f983f6f95e317aaaaf7dc217835156804778920b0b18e"}
+{"identifier": 2, "previousHash": "cafe59751afbc6a2290f983f6f95e317aaaaf7dc217835156804778920b0b18e", "body": "salut", "nonce": 67202, "timestamp": "2021-01-20, 11:04:13.198796", "hash": "cafef63914f388327e8200697f2b76c3a0ab5178d199c3040d196d342eae06ec"}

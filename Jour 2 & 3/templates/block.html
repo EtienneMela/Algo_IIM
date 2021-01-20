@@ -1,0 +1,25 @@
+<!-- 
+ Pour tester :
+ http://localhost:5000/block/view/1
+ http://localhost:5000/block/view/5
+
+ -->
+ {% include 'components/head.html' %}
+
+
+  {% if block is not false %}
+    <h1>Block numéro {{ block.identifier }}</h1>
+    <ul>
+      <li>previousHash: {{ block.previousHash }}</li>
+      <li>body: {{ block.body }}</li>
+      <li>nonce: {{ block.nonce }}</li>
+      <li>timestamp: {{ block.timestamp }}</li>
+      <li>hash: {{ block.hash }}</li>
+    </ul>
+  {% else %}
+    <p>
+      Ce block n'existe pas 
+    </p>
+  {% endif %}
+</body>
+</html>

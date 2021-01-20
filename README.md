@@ -8,3 +8,6 @@ Equipe :
 - Paartheepan Raveenthiran
 - Etienne Mela
 > TD 9 sur Discord
+
+# PPT
+https://docs.google.com/presentation/d/1qrCsVXPrJNc5wecO_wp-CwAhsgNFKwMb9KUEb4S5b4A/edit?usp=sharing

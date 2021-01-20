@@ -10,7 +10,7 @@ Exercices d'algorithmique du jour 1 réalisés par :
 
 ## Tri à bulle
 
-Ce tri consite à comparer un élément 1 et un élément 2 consécutifs d'un tableau et de les pérmuter si l'élément 1 est supérieur à l'élément 2. On recommence l'opération jusqu' à ce qu’il n’y ait plus de permutation. 
+Ce tri consiste à comparer un élément 1 et un élément 2 consécutifs d'un tableau et de les permuter si l'élément 1 est supérieur à l'élément 2. On recommence l'opération jusqu' à ce qu’il n’y ait plus de permutation. 
 
 
 ## Tri par insertion

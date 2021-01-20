@@ -16,7 +16,6 @@ def tri_fusion(tableau):
 
         i = 0
         j = 0
-        
         k = 0
         
         while i < len(gauche) and j < len(droite):

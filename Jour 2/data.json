@@ -1,5 +1,0 @@
-[
-{"identifier": 0, "previousHash": null, "body": "coucou", "nonce": 51331, "timestamp": "2021-01-19, 15:21:39.847527", "hash": "cafecb69b38173a62cec18b134d6ae689c56dc18f2be123cb4eb7fd1c5c82a57"},
-{"identifier": 1, "previousHash": "cafecb69b38173a62cec18b134d6ae689c56dc18f2be123cb4eb7fd1c5c82a57", "body": "bonsoir", "nonce": 98516, "timestamp": "2021-01-19, 15:21:40.032429", "hash": "cafe844a591f3131ff1744753f731a8b8a3d2fa1fdfa68addcb0a4fa21a5a1ae"},
-{"identifier": 2, "previousHash": "cafe844a591f3131ff1744753f731a8b8a3d2fa1fdfa68addcb0a4fa21a5a1ae", "body": "salut", "nonce": 181916, "timestamp": "2021-01-19, 15:21:40.452064", "hash": "cafe6cb4d90e3b5dab8b96745d94b6600475ebb6c64290c933d732637ea6da21"}
-]
